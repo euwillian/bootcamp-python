@@ -1,7 +1,7 @@
 # Rock Paper Scissors ASCII Art
 
 def rock():
-# Rock
+    # Rock
     return print('''
     _______
 ---'   ____)
@@ -11,6 +11,7 @@ def rock():
 ---.__(___)
 
     ''')
+
 
 def paper():
     # Paper
@@ -23,6 +24,7 @@ def paper():
 ---.__________)
 
     ''')
+
 
 def scissors():
     # Scissors
