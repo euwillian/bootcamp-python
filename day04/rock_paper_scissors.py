@@ -3,7 +3,8 @@ import rps_art_game
 
 # The Basic Rules of RPS
 
-# Despite its underlying complexity, the game’s rules are straightforward. Players deliver hand signals representing rock, paper, or scissors, 
+# Despite its underlying complexity, the game’s rules are straightforward.
+# Players deliver hand signals representing rock, paper, or scissors,
 # with the outcome determined by these three rules:
 
 # Rock wins against scissors.
