@@ -17,42 +17,42 @@ user_input = int(input(">>> "))
 computer_input = random.randint(0, 2)
 
 if user_input == 0 or user_input == 1 or user_input == 2:
-    
+
     print("\nYOU:")
-    
+
     if user_input == 0:
         rps_art_game.rock()
     elif user_input == 1:
         rps_art_game.paper()
     else:
         rps_art_game.scissors()
-        
+
     print("COMPUTER:")
-    
+
     if computer_input == 0:
         rps_art_game.rock()
     elif computer_input == 1:
         rps_art_game.paper()
     else:
         rps_art_game.scissors()
-        
+
     # Game rules:
-        
-    if user_input == computer_input:   # rock vs rock or paper vs paper or scissors vs scissors = draw
+
+    if user_input == computer_input:  # rock vs rock or paper vs paper or scissors vs scissors = draw
         print("Draw")
-    elif user_input == 0 and computer_input == 1: # rock vs paper = paper
+    elif user_input == 0 and computer_input == 1:  # rock vs paper = paper
         print("You lose!")
-    elif user_input == 0 and computer_input == 2: # rock vs scissors = rock
+    elif user_input == 0 and computer_input == 2:  # rock vs scissors = rock
         print("You win")
-    elif user_input == 1 and computer_input == 0: # paper vs rock = paper
+    elif user_input == 1 and computer_input == 0:  # paper vs rock = paper
         print("You win")
-    elif user_input == 1 and computer_input == 2: # paper vs scissors = scissors
+    elif user_input == 1 and computer_input == 2:  # paper vs scissors = scissors
         print("You lose")
-    elif user_input == 2 and computer_input == 0: # scissors vs rock = rock
+    elif user_input == 2 and computer_input == 0:  # scissors vs rock = rock
         print("You lose")
-    elif user_input == 2 and computer_input == 1: # scissors vs paper = scissors
+    elif user_input == 2 and computer_input == 1:  # scissors vs paper = scissors
         print("You win")
-    else: 
+    else:
         print("Error!")
 else:
     print("Sorry! Invalid option, try again.")
