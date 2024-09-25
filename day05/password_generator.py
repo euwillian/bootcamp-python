@@ -1,8 +1,6 @@
 """
 Day 5 - Project - A password generator
 
-
-
 letters = 'abcdefghijklmnopqrstuvwxyz'
 a = []
 for let in letters:
