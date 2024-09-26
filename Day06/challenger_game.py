@@ -22,13 +22,5 @@ def looping():
     turn_left()
 
 
-def end_game():
+for step in range(6):
     looping()
-    looping()
-    looping()
-    looping()
-    looping()
-    looping()
-
-
-end_game()
