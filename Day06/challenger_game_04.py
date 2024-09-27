@@ -14,16 +14,14 @@ def turn_right():
 
 def looping():
     turn_left()
-    while wall_on_right():  # Enquanto houver parede na direita ande
+    while wall_on_right():
         move()
-    if not wall_on_right():  # Se não houver para na direita então
-        turn_right()
+    turn_right()
+    move()
+    turn_right()
+    while front_is_clear():
         move()
-        turn_right()
-        move()
-        while wall_on_right() and not wall_in_front():  # Enquanto houver paredes na direita (estará olhando para baixo) e não houver parede em frente, ande
-            move()
-        turn_left()
+    turn_left()
 
 
 while not at_goal():
