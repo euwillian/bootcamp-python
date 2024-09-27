@@ -1,6 +1,8 @@
 """
+Challenger game link:
 
-Challenger game link: https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json
+https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%202&url=worlds%2Ftutorial_en%2Fhurdle2.json
+
 
 """
 
@@ -22,5 +24,5 @@ def looping():
     turn_left()
 
 
-for step in range(6):
+while not at_goal():
     looping()
