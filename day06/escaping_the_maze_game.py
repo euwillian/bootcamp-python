@@ -11,13 +11,13 @@ def turn_right():
     turn_left()
     turn_left()
 
-
 while not at_goal():
-    while front_is_clear():
-        move()
-        if right_is_clear():
-            turn_right()
-    if right_is_clear():
+    count = 0
+    while right_is_clear() and count < 5:
         turn_right()
+        move()
+        count += 1
+    if front_is_clear():
+        move()
     else:
         turn_left()
