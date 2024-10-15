@@ -39,6 +39,8 @@ while not game_over:
         else:
             display += "_"
 
+    print(f"Word to guess: {display}")
+
     if guess not in chosen_word:
         lives -= 1
         print("Sorry! You lose a life!")
