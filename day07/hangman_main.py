@@ -3,10 +3,8 @@ from hangman_words import word_list
 from hangman_art import stages
 
 lives = 6
-hangman_count = 0
 
 chosen_word = random.choice(word_list)
-print(chosen_word)
 
 placeholder = ""
 game_over = False
