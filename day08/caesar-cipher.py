@@ -10,8 +10,8 @@ while True:
         encrypt_text = ""
 
         for letter in original_text:
-            if letter.isspace():
-                encrypt_text += " "
+            if not letter.isalpha():
+                encrypt_text += letter
                 continue
 
             position = alphabet.index(
@@ -30,8 +30,8 @@ while True:
         decrypt_text = ""
 
         for letter in original_text:
-            if letter.isspace():
-                decrypt_text += " "
+            if not letter.isalpha():
+                decrypt_text += letter
                 continue
 
             position = alphabet.index(
