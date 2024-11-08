@@ -1,11 +1,4 @@
-"""
-v 1.0.1
-
-Create a function find_highest_bidder
-Adjust the variables, dict names
-Adjust the While condition
-
-"""
+import os
 
 secret_auction_dict = {}
 continue_bidding = True
@@ -34,7 +27,8 @@ while continue_bidding:
 
     if continue_bidding == 'no':
         continue_bidding = False
-        print("\n" * 100)
+        os.system("cls")
         find_highest_bidder(secret_auction_dict)
     else:
-        print("\n" * 100)
+        os.system("cls")
+
