@@ -1,31 +1,40 @@
 """
-v 1.0.0
+v 1.0.1
 
+Create a function find_highest_bidder
+Adjust the variables, dict names
+Adjust the While condition
 
 """
 
-secret_auction = {}
-more_bidders = True
-max_bid = 0
-name_max = ""
+secret_auction_dict = {}
+continue_bidding = True
 
-while more_bidders:
+
+def find_highest_bidder(bidding_dictionary: dict) -> None:
+    name_max = ""
+    max_bid = 0
+
+    for bidder in bidding_dictionary:
+        current_value_bid = bidding_dictionary[bidder]
+        if current_value_bid > max_bid:
+            name_max = bidder
+            max_bid = current_value_bid
+
+    print(f"The winner is {name_max} with a bid of ${max_bid}")
+
+
+while continue_bidding:
     name = input("What's your name? ")
     bid = int(input("What's your bid? "))
 
-    secret_auction[name] = bid  # {name: bid}
+    secret_auction_dict[name] = bid  # {name: bid}
 
-    more_bidders = input("Are there any other bidders? Type 'yes' or 'no'. ")
+    continue_bidding = input("Are there any other bidders? Type 'yes' or 'no'. ")
 
-    if more_bidders != 'yes':
-        more_bidders = False
+    if continue_bidding == 'no':
+        continue_bidding = False
         print("\n" * 100)
-
-
-for items in secret_auction:
-    current_value_bid = secret_auction[items]
-    if current_value_bid > max_bid:
-        name_max = items
-        max_bid = current_value_bid
-
-print(f"The winner is {name_max} with a bid of ${max_bid}")
+        find_highest_bidder(secret_auction_dict)
+    else:
+        print("\n" * 100)
