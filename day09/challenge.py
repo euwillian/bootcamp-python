@@ -11,7 +11,7 @@ secret_auction_dict = {}
 continue_bidding = True
 
 
-def find_highest_bidder(bidding_dictionary: dict) -> None:
+def find_highest_bidder(bidding_dictionary: dict[str, int]) -> None:
     name_max = ""
     max_bid = 0
 
