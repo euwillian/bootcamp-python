@@ -38,3 +38,16 @@ def format_name(f_name: str, l_name: str) -> str:
 formated_strig_result = format_name("wIlLiaN", "sAntOS")
 print(formated_strig_result)
 
+
+def function_1(text: str) -> str:
+    # print(text + text) it's not possible
+    return text + text
+
+
+def function_2(text: str) -> str:
+    return text.title()
+
+
+output = function_2(function_1("hello"))
+print(output)
+
