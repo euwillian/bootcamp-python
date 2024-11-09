@@ -27,6 +27,14 @@ output = simple_function()
 
 # tasks
 
-def format_name():
-    pass
+
+def format_name(f_name: str, l_name: str) -> str:
+    f_name = f_name.title()
+    l_name = l_name.title()
+
+    return f"{f_name} {l_name}"
+
+
+formated_strig_result = format_name("wIlLiaN", "sAntOS")
+print(formated_strig_result)
 
