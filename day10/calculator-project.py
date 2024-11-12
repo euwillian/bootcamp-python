@@ -18,14 +18,14 @@ def mul(n1, n2) -> float:
     return n1 * n2
 
 
-operations = {
-    "+": add,
-    "-": sub,
-    "*": mul,
-    "/": div
-}
-
 while True:
+
+    operations = {
+        "+": add,
+        "-": sub,
+        "*": mul,
+        "/": div
+    }
 
     first_number = float(input("First number: "))
     op_choosed = input("+ - * /:  ")
