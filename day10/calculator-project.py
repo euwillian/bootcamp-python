@@ -1,18 +1,18 @@
 # add
-def add():
-    pass
+def add(n1, n2) -> float:
+    return n1 + n2
 
 
 # subtract
-def sub():
-    pass
+def sub(n1, n2) -> float:
+    return n1 - n2
 
 
 # divide
-def div():
-    pass
+def div(n1, n2) -> float:
+    return n1 / n2
 
 
 # Multiply
-def mul():
-    pass
+def mul(n1, n2) -> float:
+    return n1 * n2
