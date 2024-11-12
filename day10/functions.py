@@ -29,6 +29,13 @@ output = simple_function()
 
 
 def format_name(f_name: str, l_name: str) -> str:
+    """
+    Take the first and last name and format it to return the title case version.
+
+    :param f_name: First name
+    :param l_name: Last name
+    :return: First and last name with title().
+    """
     f_name = f_name.title()
     l_name = l_name.title()
 
