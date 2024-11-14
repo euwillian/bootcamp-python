@@ -1,7 +1,7 @@
-# add
 import os
 
 
+# add
 def add(n1, n2) -> float:
     return n1 + n2
 
@@ -21,7 +21,7 @@ def mul(n1, n2) -> float:
     return n1 * n2
 
 
-def calculator():
+def run_calculator():
     should_accumulate = True
     first_number = float(input("First number: "))
 
@@ -47,7 +47,7 @@ def calculator():
         else:
             should_accumulate = False
             os.system("cls")
-            calculator()  # To continuoes runnning this program
+            run_calculator()  # To continuoes runnning this program
 
 
-calculator()  # To run the program, for the first time
+run_calculator()  # To run the program, for the first time
