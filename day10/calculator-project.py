@@ -18,6 +18,8 @@ def mul(n1, n2) -> float:
     return n1 * n2
 
 
+first_number = float(input("First number: "))
+
 while True:
 
     operations = {
@@ -27,15 +29,15 @@ while True:
         "/": div
     }
 
-    first_number = float(input("First number: "))
-    op_choosed = input("+ - * /:  ")
+    operation_symbol = input("+ - * /:  ")
     second_number = float(input("Second number: "))
 
-    result = operations[op_choosed](first_number, second_number)  # operations[]()
+    result = operations[operation_symbol](first_number, second_number)  # operations[]()
 
-    continue_calc = input(f"Result: {result} continue calculating with the last result? type y/n")
+    print(f"{first_number} {operation_symbol} {second_number} = {result}")
+    continue_calc = input(f"Result: {result} continue calculating with the last result? type y/n: ")
 
     if continue_calc == "y":
-        pass
+        first_number = result
     else:
         break
