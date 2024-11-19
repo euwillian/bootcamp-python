@@ -20,7 +20,7 @@ cards = [11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 """
 
 
-def user_total(user_list: list) -> int:
+def user_current_score(user_l: list) -> int:
     """
     return the total sum of user list
 
@@ -33,7 +33,7 @@ def user_total(user_list: list) -> int:
     return user_list_total
 
 
-def dealer_total(dealer_list: list) -> int:
+def dealer_current_score(dealer_l: list) -> int:
     """
     return the total sum of dealer list
 
@@ -49,20 +49,32 @@ def dealer_total(dealer_list: list) -> int:
 cards = [11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 # var1 = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
 
-user_list_cards = [random.choice(cards), random.choice(cards)]
-dealer_list_cards = [random.choice(cards)]
-print(user_list_cards)
-print(dealer_list_cards)
-print(user_total(user_list_cards))
-print(dealer_total(dealer_list_cards))
+user_list = [random.choice(cards), random.choice(cards)]
+dealer_list = [random.choice(cards)]
+request_cards = True
 
+while request_cards:
 
+    user_score = user_current_score(user_list)
+    dealer_score = dealer_current_score(dealer_list)
+
+    print(f"Your cards: {user_list}, current score: {user_score}")
+    print(f"       Computer's first card: {dealer_list}")
+    get_another = input(f"Type 'y' to get another card, type 'n' to pass: ")
+
+    if get_another == "y":
+        user_list.append(random.choice(cards))
+        if user_current_score(user_list) > 21:
+            # Dealer won the game
+            break
+    else:
+        break
 
 
 """
 Your cards: [10,4], current score: 14
     Computer's first card: 5
-Type 'y' to get another card, type 'n' to pass: n
+Type 'y' to get another card, type 'n' to pass:
 
 
 --
