@@ -1,3 +1,6 @@
+import blackjack_art
+import random
+
 """
 Our BlackJack Game Rules:
 
@@ -16,8 +19,45 @@ cards = [11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 """
 
+
+def user_total(user_list: list) -> int:
+    """
+    return the total sum of user list
+
+    """
+    user_list_total = 0
+
+    for i in user_list:
+        user_list_total += i
+
+    return user_list_total
+
+
+def dealer_total(dealer_list: list) -> int:
+    """
+    return the total sum of dealer list
+
+    """
+    dealer_list_total = 0
+
+    for i in dealer_list:
+        dealer_list_total += i
+
+    return dealer_list_total
+
+
 cards = [11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-var1 = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+# var1 = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+
+user_list_cards = [random.choice(cards), random.choice(cards)]
+dealer_list_cards = [random.choice(cards)]
+print(user_list_cards)
+print(dealer_list_cards)
+print(user_total(user_list_cards))
+print(dealer_total(dealer_list_cards))
+
+
+
 
 """
 Your cards: [10,4], current score: 14
