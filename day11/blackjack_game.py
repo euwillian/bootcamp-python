@@ -42,7 +42,7 @@ def dealer_current_score(dealer_l: list) -> int:
 
     for i in dealer_list:
         dealer_list_total += i
-
+    
     return dealer_list_total
 
 
@@ -59,16 +59,23 @@ while request_cards:
     dealer_score = dealer_current_score(dealer_list)
 
     print(f"Your cards: {user_list}, current score: {user_score}")
-    print(f"       Computer's first card: {dealer_list}")
+    print(f"       Computer's first card: {dealer_list}, current score: {dealer_score}")
     get_another = input(f"Type 'y' to get another card, type 'n' to pass: ")
 
     if get_another == "y":
+        print("\n")
         user_list.append(random.choice(cards))
         if user_current_score(user_list) > 21:
-            # Dealer won the game
+            print(f"Dealer won the game! Your score: {user_current_score(user_list)}")
             break
     else:
-        break
+        print("\n")
+        dealer_list.append(random.choice(cards))
+        if dealer_current_score(dealer_list) > 21:
+            print(f"Your final hand: {user_list}, final score: {user_current_score(user_list)}")
+            print(f"          Computer's final hand: {dealer_list}, final score: {dealer_current_score(dealer_list)}")
+            print(f"Opponent went over. You win 😁")
+            break
 
 
 """
