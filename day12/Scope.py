@@ -41,6 +41,11 @@ def incrementar():
 incrementar()
 print(contador)  # saída: 1
 
+
+Variáveis globais constantes, ou seja, não mudam seu valor. Ex.:
+PI = 3.1415
+GOOGLE_URL = 'http://www.google.com' 
+
 """
 
 inimigos = 2
